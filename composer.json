@@ -1,0 +1,16 @@
+{
+  "name": "rmh-media/laravel-deployment",
+  "version": "0.1",
+  "type": "library",
+  "description": "Laravel deployment package",
+  "keywords": ["laravel","deployment"],
+  "homepage": "https://rmh-media.com",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Mercedes Schoenen",
+      "email": "m.schoenen@rmh-media.com",
+      "role": "Developer"
+    }
+  ],
+}
