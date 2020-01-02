@@ -1,0 +1,26 @@
+<?php
+
+class DummyClass
+{
+    /**
+     * Run script after deployment.
+     *
+     * @return void
+     */
+    public function run()
+    {
+        return;
+    }
+
+    /**
+     * Run artisan commands after deployment.
+     *
+     * @return array List of commands
+     */
+    public function commands()
+    {
+        return [
+            // Commands
+        ];
+    }
+}

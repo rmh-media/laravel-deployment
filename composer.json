@@ -1,16 +1,26 @@
 {
-  "name": "rmh-media/laravel-deployment",
-  "version": "0.1",
-  "type": "library",
-  "description": "Laravel deployment package",
-  "keywords": ["laravel","deployment"],
-  "homepage": "https://rmh-media.com",
-  "license": "MIT",
-  "authors": [
-    {
-      "name": "Mercedes Schoenen",
-      "email": "m.schoenen@rmh-media.com",
-      "role": "Developer"
+    "name": "rmh-media/laravel-deployment",
+    "description": "Laravel deployment package",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Mercedes Schoenen",
+            "email": "m.schoenen@rmh-media.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {},
+    "extra": {
+        "laravel": {
+            "providers": [
+                "rmh-media\\laravel-deployment\\DeploymentServiceProvider"
+            ]
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "RmhMedia\\LaravelDeployment\\": "src/"
+        }
     }
-  ]
 }
+
