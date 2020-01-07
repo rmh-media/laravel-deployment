@@ -8,8 +8,6 @@
             "email": "m.schoenen@rmh-media.com"
         }
     ],
-    "minimum-stability": "dev",
-    "prefer-stable": true,
     "require": {},
     "extra": {
         "laravel": {
