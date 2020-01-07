@@ -5,7 +5,6 @@ namespace RmhMedia\LaravelDeployment;
 use RmhMedia\LaravelDeployment\DeploymentCreator;
 use Illuminate\Filesystem\Filesystem;
 use Illuminate\Support\ServiceProvider;
-use RmhMedia\LaravelDeployment\DeploymentCreator;
 
 class DeploymentServiceProvider extends ServiceProvider
 {
