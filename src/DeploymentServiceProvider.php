@@ -31,7 +31,6 @@ class DeploymentServiceProvider extends ServiceProvider
     private function publishMigrations()
     {
         $path = $this->getMigrationsPath();
-        echo $path;
         $this->publishes([$path => database_path('migrations')], 'migrations');
     }
 
