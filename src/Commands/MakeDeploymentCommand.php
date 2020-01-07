@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Deployments;
+namespace RmhMedia\LaravelDeployment;
 
 use Illuminate\Support\Str;
 use Illuminate\Support\Composer;
@@ -91,13 +91,18 @@ class MakeDeploymentCommand extends Command
      */
     protected function getDeploymentPath()
     {
+        $deploymentPath = '';
         if (! is_null($targetPath = $this->input->getOption('path'))) {
-            return ! $this->usingRealPath()
-                ? $this->laravel->basePath().'/'.$targetPath
+            $deploymentPath = !$this->usingRealPath()
+                ? $this->laravel->basePath() . '/' . $targetPath
                 : $targetPath;
+        } else {
+            $deploymentPath = $this->laravel->databasePath() . DIRECTORY_SEPARATOR .'deployments';
         }
-
-        return $this->laravel->databasePath() .DIRECTORY_SEPARATOR.'deployments';
+        if (!file_exists($deploymentPath)) {
+            mkdir($deploymentPath);
+        }
+        return $deploymentPath;
     }
 
     /**

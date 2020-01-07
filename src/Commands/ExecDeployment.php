@@ -1,18 +1,18 @@
 <?php
 
-namespace App\Deployments;
+namespace RmhMedia\LaravelDeployment;
 
 use Illuminate\Console\Command;
 use Illuminate\Filesystem\Filesystem;
 
-class SanitizeDeployment extends Command
+class ExecDeployment extends Command
 {
-    /**
+    /**php
      * The name and signature of the console command.
      *
      * @var string
      */
-    protected $signature = 'deploy:sanitize
+    protected $signature = 'deploy:exec
         {--all : Execute all available deployments}
         {--done : Mark all available deployments as done}
         {--force : Force execution of already ran deployment}';
@@ -62,7 +62,7 @@ class SanitizeDeployment extends Command
         $deploymentsDone = \DB::table('deployments')->get()->pluck('deployment');
 
         $files = $this->fs->files($this->getDeploymentPath());
-
+        print_r($files);
         $all = $this->option('all');
         $markAsDone = $this->option('done');
         $force = $this->option('force');
@@ -74,7 +74,12 @@ class SanitizeDeployment extends Command
 
         if (!$all) {
             $lastDeployment = $files[count($files) - 1];
-            $fileName = $lastDeployment->getBasename('.php');
+            if(is_string($lastDeployment)) {
+                $fileName = basename($lastDeployment, '.php');
+            } else {
+                $fileName = $lastDeployment->getBasename('.php');
+            }
+
 
             if (!$deploymentsDone->contains($fileName)) {
                 $this->info('Execute '. $fileName);

@@ -8,11 +8,13 @@
             "email": "m.schoenen@rmh-media.com"
         }
     ],
-    "require": {},
+    "require": {
+        "laravel/framework": "^5.8|^6.0|^7.0"
+    },
     "extra": {
         "laravel": {
             "providers": [
-                "rmh-media\\laravel-deployment\\DeploymentServiceProvider"
+                "RmhMedia\\LaravelDeployment\\DeploymentServiceProvider"
             ]
         }
     },
