@@ -62,7 +62,6 @@ class ExecDeployment extends Command
         $deploymentsDone = \DB::table('deployments')->get()->pluck('deployment');
 
         $files = $this->fs->files($this->getDeploymentPath());
-        print_r($files);
         $all = $this->option('all');
         $markAsDone = $this->option('done');
         $force = $this->option('force');
