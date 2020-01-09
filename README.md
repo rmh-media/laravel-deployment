@@ -37,7 +37,7 @@ Create a new deployment file
 
 **Command:**
 ```bash
-$ php artisan deploy:sanitize
+$ php artisan deploy:exec
 ```
 **Result:**
 The command executes maintenance and sanitizing tasks after successful code deployment
