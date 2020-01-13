@@ -46,9 +46,9 @@ php artisan deploy:exec --all --done --force
 **Result:**
 The command executes maintenance and sanitizing tasks after successful code deployment
 
-__--all:__ Executes all available deployments <br>
-__--done:__ Marks all available deployments as done <br>
-__--force:__ Forces execution of already ran deployment
+__--all:__ Execute all available deployments <br>
+__--done:__ Mark all available deployments as done <br>
+__--force:__ Force execution of already ran deployment
 
 
 
