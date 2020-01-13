@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Deployments;
+namespace RmhMedia\LaravelDeployment;
 
 use Illuminate\Console\Command;
 use Illuminate\Filesystem\Filesystem;

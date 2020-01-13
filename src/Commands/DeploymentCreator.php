@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Deployments;
+namespace RmhMedia\LaravelDeployment;
 
 use Closure;
 use Illuminate\Support\Str;
