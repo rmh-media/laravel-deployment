@@ -13,7 +13,7 @@ class ListDeployment extends Command
      * @var string
      */
     protected $signature = 'deploy:list
-        {--undone : Show only not executed deplyments}';
+        {--undone : Show only not executed deployments}';
 
     /**
      * The console command description.

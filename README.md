@@ -21,31 +21,43 @@ php artisan migrate
 ## Available commands
 **Command:**
 ```bash
-$ php artisan deploy:list
+php artisan deploy:list --undone
 ```
 **Result:**
-The command outputs a list of executed deployments
+The command outputs a list of executed deployments <br>
+__--undone:__ Show only not executed deployments <br>
+
 
 **Command:**
 ```bash
-$ php artisan make:deployment
+php artisan make:deployment <version> --command=<list of commands>
+
+# e.g.
+php artisan make:deployment v1.2.1 --command="migrate --force" --command="routes:list"
 ```
 **Result:**
 Create a new deployment file
 
+
 **Command:**
 ```bash
-$ php artisan deploy:exec
+php artisan deploy:exec --all --done --force
 ```
 **Result:**
 The command executes maintenance and sanitizing tasks after successful code deployment
+
+__--all:__ Executes all available deployments <br>
+__--done:__ Marks all available deployments as done <br>
+__--force:__ Forces execution of already ran deployment
+
+
 
 ## Credits
 
 - [rmh-media][link-author]
 
 ## License
-The EU Public License. Please see [license.md](license.md) for more information.
+Please see [license.md](license.md) for more information.
 
 [link-packagist]: https://packagist.org/packages/rmh-media/laravel-deployment
 [link-downloads]: https://packagist.org/packages/rmh-media/laravel-deployment
