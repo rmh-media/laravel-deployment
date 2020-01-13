@@ -1,5 +1,3 @@
-# STILL IN DEVELOPMENT! DO NOT USE!
-
 # Laravel Deployment
 With this package you can easily deploy your laravel projects <br>
 [Latest Version on Packagist][link-packagist]
