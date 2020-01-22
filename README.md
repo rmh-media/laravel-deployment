@@ -44,7 +44,7 @@ Create a new deployment file
 php artisan deploy:exec --all --done --force
 ```
 **Result:**
-The command executes maintenance and sanitizing tasks after successful code deployment
+The command executes maintenance tasks after successful code deployment
 
 __--all:__ Execute all available deployments <br>
 __--done:__ Mark all available deployments as done <br>
