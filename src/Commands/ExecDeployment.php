@@ -57,7 +57,7 @@ class ExecDeployment extends Command
      */
     public function handle()
     {
-        $this->info('Sanitizing deployment...');
+        $this->info('Executing deployment...');
 
         $deploymentsDone = \DB::table('deployments')->get()->pluck('deployment');
 
@@ -67,7 +67,7 @@ class ExecDeployment extends Command
         $force = $this->option('force');
 
         if (count($files) == 0) {
-            $this->info('Nothing to sanitize');
+            $this->info('Nothing to execute');
             return;
         }
 
