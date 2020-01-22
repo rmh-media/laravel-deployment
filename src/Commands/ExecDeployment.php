@@ -22,7 +22,7 @@ class ExecDeployment extends Command
      *
      * @var string
      */
-    protected $description = 'The command executes maintenance and sanitizing tasks after successful code deployment';
+    protected $description = 'The command executes maintenance tasks after successful code deployment';
 
     /**
      * The filesystem instance.
