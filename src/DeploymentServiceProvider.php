@@ -2,7 +2,10 @@
 
 namespace RmhMedia\LaravelDeployment;
 
-use RmhMedia\LaravelDeployment\DeploymentCreator;
+use RmhMedia\LaravelDeployment\Commands\DeploymentCreator;
+use RmhMedia\LaravelDeployment\Commands\MakeDeploymentCommand;
+use RmhMedia\LaravelDeployment\Commands\ExecDeployment;
+use RmhMedia\LaravelDeployment\Commands\ListDeployment;
 use Illuminate\Filesystem\Filesystem;
 use Illuminate\Support\ServiceProvider;
 

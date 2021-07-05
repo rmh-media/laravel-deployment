@@ -1,6 +1,6 @@
 <?php
 
-namespace RmhMedia\LaravelDeployment;
+namespace RmhMedia\LaravelDeployment\Commands;
 
 use Illuminate\Support\Str;
 use Illuminate\Support\Composer;
